@@ -1,0 +1,44 @@
+{
+    "name": "yosmy/mock-payment-gateway",
+    "description": "",
+    "require": {
+        "php": ">=7.2",
+        "ext-mongodb": "*",
+        "ext-json": "*",
+        "yosmy/mongo": "@dev",
+        "yosmy/http": "@dev",
+        "yosmy/log": "@dev",
+        "yosmy/payment-gateway": "@dev"
+    },
+    "require-dev": {
+        "symsonte/framework": "@dev",
+        "symfony/debug": "^4.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "Yosmy\\Payment\\Gateway\\Mock\\": [
+                "src/card",
+                "src/charge",
+                "src/customer"
+            ]
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Yosmy\\Payment\\Gateway\\Mock\\Test\\": [
+                "test/setup",
+                "test/src/card",
+                "test/src/charge",
+                "test/src/customer"
+            ]
+        }
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://php.yosmy.com"
+        }
+    ],
+    "prefer-stable": true,
+    "minimum-stability": "dev"
+}
